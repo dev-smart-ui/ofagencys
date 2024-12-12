@@ -6,7 +6,7 @@ import {DeepRequired, FieldErrorsImpl, FieldValues, GlobalError, useForm} from "
 export const Form = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [isLoading, setIsLoading] = useState(false);
-    const onSubmit = async (data) => {
+    const onSubmit = async (data:any) => {
         try {
             setIsLoading(true)
             const response = await fetch('/api/contact', {
@@ -24,8 +24,8 @@ export const Form = () => {
 
             const result = await response.json();
             console.log('Message sent successfully:', result);
-        } catch (error) {
-            alert(error)
+        } catch (error:any) {
+            alert(error?.message)
             console.error('Error while sending message:', error.message);
         }
         setIsLoading(false)
@@ -33,12 +33,12 @@ export const Form = () => {
     const formProps = {register ,errors }
     return <div className={styles.form}>
         <form onSubmit={handleSubmit(onSubmit)}>
-                <InputLine  id={"name"} label={"Твоє ім'я:"}  formProps={formProps} autocomplete="name" />
-                <InputLine id={"telegram"} label={"Твій нік у телеграм:"}  formProps={formProps} autocomplete="telegram-username"/>
+                <InputLine  id={"name"} label={"Твоє ім'я:"}  formProps={formProps} autoComplete="name" />
+                <InputLine id={"telegram"} label={"Твій нік у телеграм:"}  formProps={formProps} autoComplete="telegram-username"/>
                 <InputLine id={"phone"} label={"Твій номер телефону:"}   type="tel"
                            inputMode="numeric"
                            pattern="^\+?[0-9]*$"
-                           autocomplete="tel"
+                           autoComplete="tel"
                            placeholder="+380763125232" formProps={formProps}/>
 
             <button className={styles.button} disabled={isLoading}  type="submit"> send  </button>
