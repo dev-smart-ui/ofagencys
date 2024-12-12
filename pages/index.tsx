@@ -37,7 +37,6 @@ export default function Home() {
       >
         <Header />
         <main>
-          <Form/>
           <HeroSection />
           <AdvantagesSection />
           <ProblemSection />
@@ -47,6 +46,7 @@ export default function Home() {
           <ProofsSection/>
           <FormSection/>
           <FAQSection />
+          <Form/>
         </main>
         <Footer />
 
