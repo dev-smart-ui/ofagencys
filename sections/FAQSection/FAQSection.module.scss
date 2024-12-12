@@ -1,0 +1,24 @@
+@use '../../styles/media.scss' as *;
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+  
+.faqBg {
+  filter: blur(300px);
+  background-color: #a127e5;
+  inset: 85% -25% auto auto;
+  border-radius: 50%;
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+
+  @include media(lg) {
+      width: 400px;
+      height: 400px;
+  }
+}

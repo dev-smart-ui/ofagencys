@@ -1,0 +1,110 @@
+
+@use './media.scss' as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #000;
+  color: #Fff;
+}
+
+a, a:hover, a:active {
+  text-decoration: none;
+}
+
+a, button, input {
+  transition: all 0.5s ease;
+  outline: none;
+}
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active {
+  outline: none;
+}
+
+ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+
+  @include media(lg) {
+    font-size: 22px;
+  }
+
+  @include media(md) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  max-width: 1500px;
+  width: 100%;
+  margin: auto;
+  padding: 100px 2% 80px;
+
+  @include media(lg) {
+    padding: 70px 2% 0;
+  }
+
+  @include media(sm) {
+    padding: 50px 4% 0;
+  }
+}
+
+h2 {
+  flex: 0 auto;
+  font-size: 59px;
+  line-height: 62px;
+  opacity: 0;
+
+  @include media(lg) {
+    font-size: 40px;
+  }
+
+  @include media(md) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+
+.visible {
+  transform: translateY(-100%);
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

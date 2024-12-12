@@ -1,0 +1,41 @@
+@use '../../styles/media.scss' as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+    padding: 30px 0;
+    transition: all 0.5s ease;
+}
+
+.header.active {
+    background-color: rgb(19 19 19 / 77%);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & a {
+        color: #fff;
+        font-size: 27px;
+        font-weight: 500;
+        line-height: 27px;
+
+        @include media(lg) {
+            font-size: 22px;
+        }
+
+        @include media(sm) {
+            font-size: 17px;
+        }
+
+        &:hover {
+            color: #cecece;
+        }
+    }
+}
+  

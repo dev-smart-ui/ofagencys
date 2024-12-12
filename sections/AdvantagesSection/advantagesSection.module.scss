@@ -1,0 +1,37 @@
+@use '../../styles/media.scss' as *;
+
+.advantagesList {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+
+    @include media(xl) {
+        grid-column-gap: 12px;
+        grid-row-gap: 20px;
+    }
+
+    @include media(lg) {
+       flex-wrap: wrap;
+    }
+}
+
+.advantagesBg {
+    filter: blur(300px);
+    background-color: #a127e5;
+    border-radius: 50%;
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    inset: 10% auto auto -25%;
+    top: 0;
+    z-index: -2;
+
+    @include media(lg) {
+        width: 400px;
+        height: 400px;
+    }
+}
+  

@@ -1,0 +1,82 @@
+@use '../../styles/media.scss' as *;
+
+.image {
+    opacity: 0;
+    border-radius: 20px;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    width: 100%;
+    box-shadow: 0 0 #071f5700, 0 1px .4px #071f5708, 0 2px .8px #071f570a, 0 3.4px 1.6px #071f570b, 0 5.4px 2.9px #071f570c, 0 8.9px 5.3px #071f570c, 0 15.4px 10.4px #071f570d, 0 30.6px 22.8px #071f570e;
+
+    @include media(lg) {
+       order: -1;
+    }
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include media(lg) {
+        flex-direction: column;
+    }
+}
+
+.content  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.visibleImage  {
+    transform: translateX(-100%);
+    animation: slideInLeft 0.5s ease forwards;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+
+  .visible {
+    transform: translateY(-100%);
+    animation: slideInTop 0.5s ease forwards;
+  }
+
+
+  @keyframes slideInTop {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  .aboutBg {
+    filter: blur(300px);
+    background-color: #a127e5;
+    inset: 35% -25% auto auto;
+    border-radius: 50%;
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    z-index: -1;
+
+    @include media(lg) {
+        width: 400px;
+        height: 400px;
+    }
+  }
