@@ -48,7 +48,7 @@ export default function AboutSection() {
 
                 <Image 
                     src={imageForSection} 
-                    alt="Картинка" 
+                    alt="Фото дівчини" 
                     className={`${styles.image} ${hasBeenVisible ? styles.visibleImage : ''}`}
                 />
             </div>

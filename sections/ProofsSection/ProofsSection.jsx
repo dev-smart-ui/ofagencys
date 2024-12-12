@@ -3,7 +3,7 @@
 import { useInView } from 'react-intersection-observer';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import styles from './ProofsSection.module.scss';
+import styles from './proofsSection.module.scss';
 
 export default function ProofsSection() {
   const { ref: titleRef, inView: titleInView } = useInView({ threshold: 0.1 });

@@ -1,4 +1,4 @@
-import styles from './stepItem.module.scss';
+import styles from './StepItem.module.scss';
 
 export default function StepItem({ number, text, align }) {
     return (

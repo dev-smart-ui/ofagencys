@@ -3,8 +3,11 @@
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
+import Image from 'next/image';
 import styles from './heroSection.module.scss';
 import CTAButton from '@/components/CTAButton/CTAButton';
+
+import bg from './hero_bg.jpg'; 
 
 export default function HeroSection() {
   const { ref, inView } = useInView({ threshold: 0.1 });
@@ -26,6 +29,7 @@ export default function HeroSection() {
             <CTAButton href="/#lead-form" >Подати заявку</CTAButton>
           </div>
       </div>
+      <Image src={bg} alt="Фон з дівчиною" width={2400} height={1600} className={styles.heroBg} />
     </section>
   );
 }

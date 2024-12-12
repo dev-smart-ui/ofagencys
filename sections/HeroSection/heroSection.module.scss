@@ -4,8 +4,8 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url('./andrey-zvyagintsev-1HVOO-mg3bg-unsplash 1.jpg')no-repeat center bottom/cover;
     justify-content: center;
+    position: relative;
 
     @include media(md) {
         height: auto;
@@ -14,10 +14,15 @@
 
 }
 
-.bgVideo {
+.heroBg {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    left: 0;
+    top: 0;
+    filter: brightness(0.5);
+    z-index: -1;
 }
  
 .content {

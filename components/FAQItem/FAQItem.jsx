@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './faqItem.module.scss';
+import styles from './FAQItem.module.scss';
 
 export default function FAQItem({ question, answer, isOpen, onToggle }) {
   return (

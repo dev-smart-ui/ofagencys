@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
-import styles from './listItems.module.scss';
+import styles from './ListItems.module.scss';
 
 export default function ListItems({ data, background }) {
   const { ref, inView } = useInView({ threshold: 0.1 });
@@ -24,7 +24,7 @@ export default function ListItems({ data, background }) {
     <ul className={styles.listBlock}>
       {data.map((item, index) => (
         <li ref={ref} key={index}  className={`${styles.listItem} ${styles[background]} ${hasBeenVisible ? styles.visible : ''}`}>
-           <Image src={iconSrc} alt={isRed ? 'cross' : 'check'} className={styles.icon}  width={20} height={20} />
+           <Image src={iconSrc} alt={isRed ? 'Проблема' : 'Підтвердження'} className={styles.icon}  width={20} height={20} />
            {item}
         </li>
       ))}
