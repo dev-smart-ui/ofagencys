@@ -35,7 +35,7 @@ export default function ProblemSection() {
             <div className={styles.wrapper}>
                 <Image ref={ref}
                     src={imageForSection} 
-                    alt="Картинка" 
+                    alt="Фото дівчини" 
                     className={`${styles.image} ${hasBeenVisible ? styles.visibleImage : ''}`}
                 />
 

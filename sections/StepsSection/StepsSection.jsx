@@ -77,14 +77,14 @@ export default function StepsSection() {
           >
             <Image
               src="/elements/step-line.svg"
-              alt="Line"
+              alt="Лінія шляху"
               width={20}
               height={20}
             />
 
             <Image
               src="/elements/step-line_mob.svg"
-              alt="Line"
+              alt="Лінія шляху"
               width={20}
               height={20}
             />

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
-import styles from './testimonialCard.module.scss';
+import styles from './TestimonialCard.module.scss';
 
 export default function TestimonialCard({ text, name, image }) {
   const { ref, inView } = useInView({ threshold: 0.1 });
