@@ -11,10 +11,10 @@ import AboutSection from '@/sections/InfoSection/AboutSection';
 import ReviewsSection from '@/sections/ReviewsSection/ReviewsSection';
 import StepsSection from '@/sections/StepsSection/StepsSection';
 import ProofsSection from '@/sections/ProofsSection/ProofsSection';
-import FormSection from '@/sections/FormSection/FormSection';
+import {Form} from "@/sections/FormSection/form";
 import FAQSection from '@/sections/FAQSection/FAQSection';
 import Footer from '@/components/Footer/Footer';
-import {Form} from "@/sections/form/form";
+
 
 // const montserrat = Montserrat({
 //   variable: "--font-montserrat",
@@ -44,9 +44,8 @@ export default function Home() {
           <ReviewsSection/>
           <StepsSection />
           <ProofsSection/>
-          <FormSection/>
-          <FAQSection />
           <Form/>
+          <FAQSection />
         </main>
         <Footer />
 

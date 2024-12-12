@@ -77,12 +77,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   flex: 0 auto;
-  font-size: 59px;
+  font-size: 52px;
   line-height: 62px;
   opacity: 0;
 
   @include media(lg) {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   @include media(md) {
