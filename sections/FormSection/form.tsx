@@ -40,7 +40,7 @@ export const Form = () => {
         setIsLoading(false)
     };
     const formProps = {register ,errors }
-    return <section className={styles.formSection}>
+    return <section id='form' className={styles.formSection}>
         <div className='container'>
             <h2 ref={ref}  className={`${hasBeenVisible ? 'visible' : ''}`}>Залиш заявку і наш менеджер зв'яжеться з тобою </h2>
 

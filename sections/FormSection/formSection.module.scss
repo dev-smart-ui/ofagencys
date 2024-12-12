@@ -75,6 +75,10 @@
     &:hover {
         background: linear-gradient(231deg, #ff007a, #e000ff);
     }
+
+    &:active {
+        transform: scale(0.8);
+    }
 }
 
 .errorMessage {

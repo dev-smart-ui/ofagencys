@@ -26,7 +26,7 @@ export default function HeroSection() {
           <div className={styles.content}>
             <h1 ref={ref} className={`${hasBeenVisible ? styles.visible : ''}`}>Хочеш заробляти більше на OnlyFans?</h1>
             <p  ref={ref} className={`${hasBeenVisible ? styles.visible : ''}`}>Приєднуйся до топової агенції зараз та збільшуй свої доходи без зайвих зусиль!</p>
-            <CTAButton href="/#lead-form" >Подати заявку</CTAButton>
+            <CTAButton href="/#form" >Подати заявку</CTAButton>
           </div>
       </div>
       <Image src={bg} alt="Фон з дівчиною" width={2400} height={1600} className={styles.heroBg} />

@@ -43,7 +43,7 @@ export default function AboutSection() {
                         background="green" 
                     />
 
-                    <CTAButton href="/#lead-form">Подати заявку</CTAButton>
+                    <CTAButton href="/#form">Подати заявку</CTAButton>
                 </div>
 
                 <Image 
