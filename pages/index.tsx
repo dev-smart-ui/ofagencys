@@ -14,6 +14,7 @@ import ProofsSection from '@/sections/ProofsSection/ProofsSection';
 import FormSection from '@/sections/FormSection/FormSection';
 import FAQSection from '@/sections/FAQSection/FAQSection';
 import Footer from '@/components/Footer/Footer';
+import {Form} from "@/sections/form/form";
 
 // const montserrat = Montserrat({
 //   variable: "--font-montserrat",
@@ -36,6 +37,7 @@ export default function Home() {
       >
         <Header />
         <main>
+          <Form/>
           <HeroSection />
           <AdvantagesSection />
           <ProblemSection />
