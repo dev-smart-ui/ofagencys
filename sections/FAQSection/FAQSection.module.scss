@@ -43,6 +43,7 @@
   background: #1E1E1E;
   box-shadow: 0px 12px 56px 0px rgba(6, 28, 61, 0.08);
   padding: 20px;
+  opacity: 0;
 
   @include media(md) {
     padding: 20px  0;

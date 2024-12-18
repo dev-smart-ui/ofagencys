@@ -109,6 +109,7 @@
 }
 
 .errorMessage {
+    color: red;
     position: absolute;
     right: 20px;
     bottom: 15px;
@@ -149,3 +150,30 @@
        justify-content: center;
     }
 }
+
+.successMessage {
+    color: green;
+
+    @include media(md) {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+  
+.spinner {
+    animation: spin 1s linear infinite; /* Крутится бесконечно */
+}
+  
