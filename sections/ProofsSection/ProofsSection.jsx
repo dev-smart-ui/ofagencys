@@ -16,10 +16,10 @@ export default function ProofsSection() {
   }, [titleInView]);
 
   const screenshotsData = [
-    { src: '/proofs/0157k.webp', alt: 'Доказ 1' },
-    { src: '/proofs/0249k.webp', alt: 'Доказ 2' },
-    { src: '/proofs/0344k.webp', alt: 'Доказ 3' },
-    { src: '/proofs/0413k.webp', alt: 'Доказ 4' },
+    { src: '/proofs/stats1.png', alt: 'Доказ 1' },
+    { src: '/proofs/stats2.png', alt: 'Доказ 2' },
+    { src: '/proofs/stats3.png', alt: 'Доказ 3' },
+    { src: '/proofs/stats4.png', alt: 'Доказ 4' },
   ];
 
   return (
@@ -29,7 +29,7 @@ export default function ProofsSection() {
           ref={titleRef}
           className={`${hasTitleBeenVisible ? 'visible' : ''}`}
         >
-          Менше слів – більше доказів
+          Ми робимо більше – за менше слів.
         </h2>
         <div className={styles.screenshotsWrapper}>
           {screenshotsData.map((shot, index) => {
@@ -61,8 +61,6 @@ export default function ProofsSection() {
             );
           })}
         </div>
-
-        <div className={styles.proofsBg}></div>
       </div>
 
    

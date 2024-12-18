@@ -2,44 +2,33 @@
 
 .card {
     opacity: 0;
-    border-radius: 20px;
     flex-flow: column;
-    justify-content: space-between;
-    padding: 20px;
+    gap: 20px;
+    padding: 32px;
     display: flex;
-    background:linear-gradient(138deg, #ff007a, #70a1ff);
+    border-radius: 16px;
+    background: var(--_, linear-gradient(270deg, #9B59B6 0%, #007BFF 100%));
+    box-shadow: 0px 12px 32px 0px rgba(6, 28, 61, 0.04);
     position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 #00d1ff00, 0 0 #00d1ff18, 0 .2px .2px #00d1ff1d, 0 .7px .7px #00d1ff20, 0 1.9px 2px #00d1ff22, 0 4.7px 5px #00d1ff23, 0 10.9px 11.8px #00d1ff24, 0 27px 29px #00d1ff28;
 }
   
 .people {
-    margin-top: 20px;
-    flex: 1;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     display: flex;
-    gap: 16px;
+    gap: 12px;
 
     img {
         object-fit: cover;
         border-radius: 50%;
-        flex: 0 auto;
-        width: 70px;
-        height: 70px;
-
-        @include media(md) {
-            width: 40px;
-            height: 40px;
-        }
+        width: 48px;
+        height: 48px;
     }
 
     span {
-        font-size: 22px;
-
-        @include media(md) {
-            font-size: 18px;
-        }
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px; 
     }
 }
 
@@ -61,3 +50,10 @@
     }
   }
   
+
+.text {
+  font-family: 'Inter';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}

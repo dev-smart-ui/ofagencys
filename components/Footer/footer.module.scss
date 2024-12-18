@@ -1,8 +1,25 @@
 .footer {
+    border-top: 1px solid #06376c;
+    padding: 20px 0 10px;
+    position: relative;
+    overflow: hidden;
+
     p {
         text-align: center;
         font-size: 14px;
         line-height: 16px;
         padding: 15px 0;
     }
+}
+
+.bg {
+    filter: blur(70px);
+    background-color: #a127e5;
+    border-radius: 50%;
+    width: 44%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -3%;
+    z-index: -2;
 }

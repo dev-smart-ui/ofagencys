@@ -8,14 +8,13 @@ import styles from './infoSection.module.scss';
 
 import imageForSection from './image_for_problem.jpg'; 
 
-
 const problemsData = [
-  "Нерозуміння, з чого почати та що робити",
-  "Відсутня активність на сторінці",
-  "Бракує часу",
-  "Підписники не купують контент",
-  "Попередня агенція не давала бажанних результатів",
-  "Кількість підписників та прибуток не зростають"
+  "Важко визначитися, з чого почати і як правильно розвивати сторінку",
+  "Мала активність аудиторії та низька залученість",
+  "Брак часу на систематичне та результативне ведення профілю",
+  "Аудиторія не проявляє інтерес до твоїх продуктів чи послуг",
+  "Співпраця з агентствами не принесла очікуваних результатів",
+  "Зусилля не приносять зростання кількості підписників і доходу"
 ];
 
 export default function ProblemSection() {
@@ -33,20 +32,22 @@ export default function ProblemSection() {
     <section>
         <div className="container">
             <div className={styles.wrapper}>
+                <div className={styles.content}>
+                    <h2 ref={ref}  className={`${hasBeenVisible ? 'visible' : ''}`}>OnlyFans – це більше, ніж просто платформа для контенту</h2>
+                    <p ref={ref} className={`${hasBeenVisible ? 'visible' : ''}`}>Ведучи свій профіль, ти, напевно, вже зіштовхувалася з подібними труднощами:</p>
+                    <ListItems 
+                        data={problemsData} 
+                        background="red" 
+                    />
+                </div>
+
                 <Image ref={ref}
                     src={imageForSection} 
                     alt="Фото дівчини" 
                     className={`${styles.image} ${hasBeenVisible ? styles.visibleImage : ''}`}
                 />
 
-                <div className={styles.content}>
-                    <h2 ref={ref}  className={`${hasBeenVisible ? 'visible' : ''}`}>OnlyFans - це не просто...</h2>
-                    <p ref={ref} className={`${hasBeenVisible ? 'visible' : ''}`}>Якщо ти вже починала вести сторінку - ти точно стикалася з такими труднощами:</p>
-                    <ListItems 
-                        data={problemsData} 
-                        background="red" 
-                    />
-                </div>
+
             </div>
             
         </div>

@@ -14,9 +14,9 @@ body {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
   background: #000;
   color: #Fff;
+  font-family: "Poppins", sans-serif;
 }
 
 a, a:hover, a:active {
@@ -26,6 +26,7 @@ a, a:hover, a:active {
 a, button, input {
   transition: all 0.5s ease;
   outline: none;
+  font-family: "Inter", serif;
 }
 
 input, input:hover, input:focus, input:active,
@@ -41,10 +42,11 @@ ul, li {
 
 p {
   margin: 0;
+  font-size: 24px;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 32px;
+  line-height: 161.5%;
 
+  text-transform: capitalize;
   @include media(lg) {
     font-size: 22px;
   }
@@ -61,24 +63,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
   position: relative;
-  max-width: 1500px;
+  max-width: 1248px;
   width: 100%;
   margin: auto;
-  padding: 100px 2% 80px;
 
-  @include media(lg) {
-    padding: 70px 2% 0;
+  @include media(xl) {
+    padding: 0 15px;
   }
 
-  @include media(sm) {
-    padding: 50px 4% 0;
-  }
 }
 
 h2 {
-  flex: 0 auto;
-  font-size: 52px;
-  line-height: 62px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 132%; 
   opacity: 0;
 
   @include media(lg) {
@@ -106,5 +104,33 @@ h2 {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+.btn {
+  opacity: 0;
+  display: block;
+  text-align: center;
+  margin-top: 32px;
+  padding: 15px 34px;
+  color: #FFF;
+  width: max-content;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: normal;
+  overflow: hidden;
+  border-radius: 40px;
+  background: var(--_, linear-gradient(270deg, #9B59B6 0%, #007BFF 100%));
+  text-transform: capitalize;
+  border: none;
+  cursor: pointer;
+
+  &:active {
+      transform: scale(0.8);
+  }
+
+  
+  @include media(xl) {
+    font-size: 19px;
   }
 }

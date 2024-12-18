@@ -3,7 +3,7 @@
 .listBlock {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     width: 100%;
   }
   
@@ -11,41 +11,27 @@
     opacity: 0;
     display: flex;
     align-items: center;
-    padding: 15px 30px;
-    border-radius:  20px;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 500;
+    line-height: 30px;
 
-    @include media(lg) {
-      font-size: 20px;
-    }
-
-    @include media(md) {
-      font-size: 17px;
-      line-height: 24px;
+    @include media(sm) {
+        font-size: 16px;
+        line-height: 132%;
     }
   }
   
   .icon {
-    margin-right: 25px;
-    width: 30px;
+    margin-right: 16px;
+    width: 40px;
     height: 100%;
 
-    @include media(lg) {
-      margin-right: 18px;
-      width: 23px;
+    @include media(sm) {
+      width: 28px;
+      margin-right: 12px;
     }
-  }
 
-  
-  .red {
-    background: linear-gradient(90deg, #3339, #ff000499);
   }
-  
-  .green {
-    background: linear-gradient(90deg, #3339, #1f09);
-  }
-  
 
   .visible {
     transform: translateY(-100%);

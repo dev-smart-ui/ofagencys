@@ -10,7 +10,7 @@
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
-  margin-top: 20px;
+  margin-top: 45px;
 
   @include media(sm) {
     grid-template-columns: 1fr;
@@ -45,23 +45,5 @@
   to {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-
-.proofsBg {
-  filter: blur(300px);
-  background-color: #c502e0;
-  inset: 60% auto auto -25%;
-  border-radius: 50%;
-  width: 700px;
-  height: 700px;
-  position: absolute;
-  top: 0;
-  z-index: -2;
-
-  @include media(lg) {
-      width: 400px;
-      height: 400px;
   }
 }

@@ -7,13 +7,13 @@ import StepItem from "@/components/StepItem/StepItem";
 import styles from "./stepsSection.module.scss";
 
 const stepsData = [
-  { number: 1, text: "Залишити заявку у нашому телеграм боті", align: "left" },
-  { number: 2, text: "Знайомство з командою", align: "center" },
-  { number: 3, text: "Обговорення умов співпраці", align: "right" },
-  { number: 4, text: "Передача/створення сторінки", align: "center" },
-  { number: 5, text: "Налаштування платіжної системи", align: "left" },
-  { number: 6, text: "Побудова плану по розвитку сторінки", align: "right" },
-  { number: 7, text: "Старт роботи та перші результати", align: "left" },
+  { number: 1, text: "Залиш заявку в нашому Telegram-боті — швидко та зручно" },
+  { number: 2, text: "Перше знайомство — представимо команду, що буде працювати з тобою"},
+  { number: 3, text: "Узгодження деталей — обговоримо усі нюанси співпраці та твої очікування"},
+  { number: 4, text: "Передача або запуск сторінки — налаштовуємо все для бездоганної роботи"},
+  { number: 5, text: "Інтеграція платежів — впроваджуємо надійну та зручну систему розрахунків"},
+  { number: 6, text: "Розробка стратегії — створюємо детальний план для росту твоєї сторінки"},
+  { number: 7, text: "Запуск та перші досягнення — стартуємо і одразу показуємо результат"},
 ];
 
 export default function StepsSection() {
@@ -55,11 +55,11 @@ export default function StepsSection() {
   }, [inView]);
 
 
-  return (
+  return ( 
     <section className={styles.stepsSection} ref={sectionRef}>
       <div className="container"> 
-        <h2 ref={inViewRef} className={`${hasBeenVisible ? 'visible' : ''}`}>
-          Твій шлях
+        <h2 ref={inViewRef} className={`${styles.title} ${hasBeenVisible ? 'visible' : ''}`}>
+          Твій шлях до успіху
         </h2>
         <div className={styles.stepsWrapper}>
           {stepsData.map((step, index) => (
@@ -67,7 +67,6 @@ export default function StepsSection() {
               key={index}
               number={step.number}
               text={step.text}
-              align={step.align}
             />
           ))}
 
@@ -81,16 +80,10 @@ export default function StepsSection() {
               width={20}
               height={20}
             />
-
-            <Image
-              src="/elements/step-line_mob.svg"
-              alt="Лінія шляху"
-              width={20}
-              height={20}
-            />
           </div>
         </div>
+        <div className={styles.stepsElements}></div>
       </div>
-    </section>
+    </section> 
   );
 }

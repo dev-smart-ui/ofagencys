@@ -1,3 +1,6 @@
+import { useState, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 import Card from '../../components/Card/Card';
 import styles from './advantagesSection.module.scss';
 
@@ -10,9 +13,20 @@ const cardsData = [
 
 
 export default function AdvantagesSection() {
+  const { ref, inView } = useInView({ threshold: 0.5 });
+
+  const [hasBeenVisible, setHasBeenVisible] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      setHasBeenVisible(true);
+    }
+  }, [inView]);
+
+
   return (
     <div className="container">
-        <div className={styles.advantagesList}>
+        <div ref={ref} className={`${styles.advantagesList} ${hasBeenVisible ? styles.visible : ''}`}>
             {cardsData.map((card, index) => (
                 <Card 
                 key={index} 
@@ -21,8 +35,6 @@ export default function AdvantagesSection() {
                 />
             ))}
         </div>
-        
-        <div className={styles.advantagesBg}></div>
     </div>
   );
 }

@@ -1,5 +1,23 @@
 @use '../../styles/media.scss' as *;
 
+.reviewsSection {
+  background: #131212;
+  padding: 124px 0;
+
+  @include media(lg) {
+    padding: 80px 0;
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 72px;
+
+  @include media(md) {
+    margin-bottom: 40px;
+  }
+}
+
 .cardsWrapper {
     grid-column-gap: 24px;
     grid-row-gap: 24px;

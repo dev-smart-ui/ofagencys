@@ -17,12 +17,12 @@ export default function TestimonialCard({ text, name, image }) {
 
   return (
     <div ref={ref} className={`${styles.card} ${hasBeenVisible ? styles.visible : ''}`}  >
-      <p className={styles.text}>{text}</p>
-
       <div className={styles.people}>
         <Image src={image} alt={name} width={50} height={50}/>
         <span>{name}</span>
       </div>
+
+      <p className={styles.text}>{text}</p>
     </div>
   );
 }

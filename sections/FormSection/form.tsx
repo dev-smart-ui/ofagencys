@@ -1,4 +1,5 @@
 import React, {FC, InputHTMLAttributes, useState, useEffect} from 'react';
+import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import styles from './formSection.module.scss'
 import {DeepRequired, FieldErrorsImpl, FieldValues, GlobalError, useForm} from "react-hook-form";
@@ -40,22 +41,34 @@ export const Form = () => {
         setIsLoading(false)
     };
     const formProps = {register ,errors }
-    return <section id='form' className={styles.formSection}>
-        <div className='container'>
-            <h2 ref={ref}  className={`${hasBeenVisible ? 'visible' : ''}`}>Залиш заявку і наш менеджер зв'яжеться з тобою </h2>
+    return <section ref={ref} id='form' className={`${styles.formSection} ${hasBeenVisible ? 'visible' : ''}`}>
+        <div className='container'> 
+            <div className={styles.wrapper}>
+                <div className={styles.block}>
+                    <Image src='/hero_bg.jpg' alt="Фон з дівчиною" width={2400} height={1600} className={styles.heroBg} />
+                    <h2 ref={ref}  className={`${hasBeenVisible ? 'visible' : ''}`}>Зв'яжіться з нами</h2>
+                    <p>
+                        Ми раді отримати ваше повідомлення! Будь ласка, заповніть форму нижче, і наша команда зв'яжеться з вами якнайшвидше
+                    </p>
+                </div>
 
-            <div ref={ref} className={`${styles.form} ${hasBeenVisible ? 'visible' : ''}`}>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                        <InputLine  id={"name"} label={"Твоє ім'я:"} placeholder="Ім'я"  formProps={formProps} autoComplete="name" />
-                        <InputLine id={"telegram"} label={"Твій нік у телеграм:"} placeholder="@Name"  formProps={formProps} autoComplete="telegram-username"/>
-                        <InputLine id={"phone"} label={"Твій номер телефону:"}   type="tel"
-                                inputMode="numeric"
-                                pattern="^\+?[0-9]*$"
-                                autoComplete="tel"
-                                placeholder="+380763125232" formProps={formProps}/>
+                <div  className={styles.form}>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                            <InputLine  id={"name"} label={"Твоє ім'я:"} placeholder="Ім'я"  formProps={formProps} autoComplete="name" />
+                            <InputLine id={"telegram"} label={"Твій нік у телеграм:"} placeholder="@Name"  formProps={formProps} autoComplete="telegram-username"/>
+                            <InputLine id={"phone"} label={"Твій номер телефону:"}   type="tel"
+                                    inputMode="numeric"
+                                    pattern="^\+?[0-9]*$"
+                                    autoComplete="tel"
+                                    placeholder="+380763125232" formProps={formProps}/>
 
-                    <button className={styles.button} disabled={isLoading}  type="submit"> send  </button>
-                </form>
+                        <button className={styles.button} disabled={isLoading}  type="submit"> 
+                            Відправити  
+
+                            <Image src='/elements/arrowRight.svg' alt="Стрілка вправо" width={24} height={24} />
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     

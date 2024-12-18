@@ -11,12 +11,12 @@ import imageForSection from './image_for_about.jpg';
 
 
 const aboutData = [
-    "Повне оформлення та ведення сторінки",
-    "Налаштування платіжних систем",
-    "Розробка контент-стратегії",
-    "Забезпечення притоку нових підписників",
-    "Турбуємося про конфіденційність вашої діяльності",
-    "Активна робота в чаті з потенційними клієнтами"
+    "Не знаєш, з чого почати та як розвивати свою сторінку",
+    "Налаштування безпечних платіжних систем.",
+    "Розробка індивідуальної стратегії контенту",
+    "Привернення нових підписників і забезпечення їхньої активності",
+    "Забезпечуємо конфіденційність твоєї діяльності",
+    "Постійна комунікація з потенційними клієнтами для збільшення взаємодії"
 ];
   
 
@@ -35,24 +35,24 @@ export default function AboutSection() {
     <section id='about'>
         <div className="container">
             <div className={styles.wrapper}>
-                <div className={styles.content}>
-                    <h2  ref={ref}  className={`${hasBeenVisible ? 'visible' : ''}`}>Ми — агенція повного циклу</h2>
-                    <p  ref={ref}  className={`${hasBeenVisible ? 'visible' : ''}`}>Беремо на себе всі процеси, аби ти змогла повністю сфокусуватися на створенні контенту: </p>
-                    <ListItems 
-                        data={aboutData} 
-                        background="green" 
-                    />
-
-                    <CTAButton href="/#form">Подати заявку</CTAButton>
-                </div>
-
                 <Image 
                     src={imageForSection} 
                     alt="Фото дівчини" 
                     className={`${styles.image} ${hasBeenVisible ? styles.visibleImage : ''}`}
                 />
+
+
+                <div className={styles.content}>
+                    <h2  ref={ref}  className={`${hasBeenVisible ? 'visible' : ''}`}>OnlyFans – це більше, ніж просто платформа для контенту</h2>
+                    <p  ref={ref}  className={`${hasBeenVisible ? 'visible' : ''}`}>Ми беремо на себе всі аспекти ведення твоєї сторінки, щоб ти могла повністю зосередитися на створенні контенту: </p>
+                    <ListItems 
+                        data={aboutData} 
+                        background="green" 
+                    />
+                </div>
+
+                
             </div>
-            <div className={styles.aboutBg}></div>
         </div>
     </section>
   );

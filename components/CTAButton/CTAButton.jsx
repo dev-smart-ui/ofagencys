@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
-import styles from './CTAButton.module.scss';
 
 export default function CTAButton({ href, children }) {
   const { ref, inView } = useInView({ threshold: 0.1 });
@@ -17,7 +16,7 @@ export default function CTAButton({ href, children }) {
   }, [inView]);
 
   return (
-    <Link href={href} ref={ref} className={`${styles.btn} ${hasBeenVisible ? styles.visible : ''}`}>
+    <Link href={href} ref={ref} className={`btn ${hasBeenVisible ? 'visible' : ''}`}>
       {children}
     </Link>
   );
